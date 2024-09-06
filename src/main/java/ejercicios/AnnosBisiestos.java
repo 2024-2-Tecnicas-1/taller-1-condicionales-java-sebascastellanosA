@@ -10,8 +10,23 @@ import java.util.Scanner;
  */
 public class AnnosBisiestos {
     public static String evaluar(int anno){
-        // TODO: Coloca aquí el código del ejercicio 2: Años bisiestos
-        return "";
+        int year = anno;
+
+        if (year >= 1582) {
+            if (year % 100 == 0 && year % 400 != 0) {
+                return year + " no es bisiesto";
+            } else if (year % 4 == 0) {
+                return year + " es bisiesto";
+            } else {
+                return year + " no es bisiesto";
+            }
+        } else {
+            if (year % 4 == 0) {
+                return year + " es bisiesto";
+            } else {
+                return year + " no es bisiesto";
+            }
+        }
     }
     
     public static void main(String[] args) {

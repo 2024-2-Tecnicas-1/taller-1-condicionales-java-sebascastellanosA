@@ -10,8 +10,18 @@ import java.util.Scanner;
  */
 public class LetraONumero {
     public static String evaluar(char caracter) {
-        // TODO: Coloca aquí el código del ejercicio 4: Letra o número
-        return "";
+        int n = (int) caracter; 
+
+        if (n >= 65 && n <= 90) {
+            return "Es letra mayúscula";
+        } else if (n >= 97 && n <= 122) {
+            return "Es letra minúscula";
+        } else if (Character.isDigit(caracter)) {
+            return "Es número";
+        } else {
+            return "No es letra ni número";
+        }
+
     }
     
     public static void main(String[] args) {
